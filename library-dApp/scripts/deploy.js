@@ -1,12 +1,12 @@
 const main = async() => {
   const contractFactory = await ethers.getContractFactory('Library');
   const contract = await contractFactory.deploy();
-  await contract.deploy();
+  await contract.deployed();
 
-  console.log("Contract was deployed to: ", contract.address);
+  console.log("Contract deployed to: ", contract.address);
 }
 
-const runMain = async => {
+const runMain = async() => {
   try {
     await main();
     process.exit(0);
